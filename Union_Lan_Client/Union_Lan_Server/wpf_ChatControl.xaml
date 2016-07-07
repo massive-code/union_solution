@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="Union_Lan_Client.wpf_ChatControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" Height="70" Width="472">
+    <RichTextBox x:Name="rtb1" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="472" SpellCheck.IsEnabled="True" BorderThickness="1" Background="White" BorderBrush="#FF1089EE" FontFamily="Times New Roman" FontSize="14" PreviewKeyDown="rtb1_PreviewKeyDown" CaretBrush="#FF0A5E7E" PreviewKeyUp="rtb1_PreviewKeyUp" KeyDown="rtb1_KeyDown">
+        <FlowDocument/>
+    </RichTextBox>
+</UserControl>

@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C57E40B-8E12-40CA-BE6C-42D59AB44F04}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Union_Lan_Client</RootNamespace>
+    <AssemblyName>Union_Lan_Client</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pict_ClientLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Union_Lan_Client.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cryptor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Cryptor.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cl_Client_v2.cs" />
+    <Compile Include="cl_Compression.cs" />
+    <Compile Include="cl_FileWorker.cs" />
+    <Compile Include="cl_GlobalVariables.cs" />
+    <Compile Include="cl_Client.cs" />
+    <Compile Include="cl_DataWorkerClient.cs" />
+    <Compile Include="cl_Swap.cs" />
+    <Compile Include="cl_SystemHook.cs" />
+    <Compile Include="cl_XML_Data.cs" />
+    <Compile Include="f_Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Chat.Designer.cs">
+      <DependentUpon>f_Chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Error.Designer.cs">
+      <DependentUpon>f_Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Info.Designer.cs">
+      <DependentUpon>f_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Main.Designer.cs">
+      <DependentUpon>f_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Notification.Designer.cs">
+      <DependentUpon>f_Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Settings.Designer.cs">
+      <DependentUpon>f_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_Union.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Union.Designer.cs">
+      <DependentUpon>f_Union.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_UserList.Designer.cs">
+      <DependentUpon>f_UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_UserRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_UserRegistration.Designer.cs">
+      <DependentUpon>f_UserRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="wpf_ChatControl.xaml.cs">
+      <DependentUpon>wpf_ChatControl.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="f_Chat.resx">
+      <DependentUpon>f_Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Error.resx">
+      <DependentUpon>f_Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Info.resx">
+      <DependentUpon>f_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Main.resx">
+      <DependentUpon>f_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Notification.resx">
+      <DependentUpon>f_Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Settings.resx">
+      <DependentUpon>f_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Union.resx">
+      <DependentUpon>f_Union.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_UserList.resx">
+      <DependentUpon>f_UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_UserRegistration.resx">
+      <DependentUpon>f_UserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 с пакетом обновления 1 %28SP1%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="wpf_ChatControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pict_ClientLogo.ico" />
+    <None Include="Resources\pict_Swap.png" />
+    <None Include="Resources\pict_Profile.png" />
+    <None Include="Resources\pict_Profile.jpg" />
+    <EmbeddedResource Include="Resources\pict_Default.jpg" />
+    <None Include="Resources\pict_Send.png" />
+    <None Include="Resources\pict_Smile.png" />
+    <None Include="Resources\pict_Close1.png" />
+    <None Include="Resources\anim_Writing1.gif" />
+    <None Include="Resources\pict_AddFile.png" />
+    <None Include="Resources\pict_Remove.png" />
+    <None Include="Resources\pict_Minimize.png" />
+    <None Include="Resources\pict_Settings.png" />
+    <None Include="Resources\pict_MainBack.png" />
+    <None Include="Resources\anim_Loader.gif" />
+    <None Include="Resources\pict_Close.png" />
+    <None Include="Resources\anim_Writing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<cl_Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <po_MainFormPosition>
+    <X>704</X>
+    <Y>204</Y>
+  </po_MainFormPosition>
+  <po_UnionFormPosition>
+    <X>1013</X>
+    <Y>34</Y>
+  </po_UnionFormPosition>
+  <ps_ServerIP>192.168.1.34</ps_ServerIP>
+  <ps_ServerPort>443</ps_ServerPort>
+  <pb_ProxyEnabled>false</pb_ProxyEnabled>
+  <ps_ProxyIP />
+  <ps_ProxyPort />
+  <pb_RememberLogin>true</pb_RememberLogin>
+  <ps_Login>2</ps_Login>
+  <pb_Autostart>false</pb_Autostart>
+  <pb_ProgrammLink>false</pb_ProgrammLink>
+  <pb_RememberPassword>false</pb_RememberPassword>
+  <ps_Password>iWKwFTwa2CFgOQF5AOfnrg==</ps_Password>
+</cl_Settings>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09E2BC90-BC10-438B-B858-2F83E508F87E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Union_Lan_Server</RootNamespace>
+    <AssemblyName>Union_Lan_Server</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pict_ServerLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cryptor">
+      <HintPath>bin\Release\Cryptor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cl_Client.cs" />
+    <Compile Include="cl_Compression.cs" />
+    <Compile Include="cl_FileWorker.cs" />
+    <Compile Include="cl_Server.cs" />
+    <Compile Include="cl_GlobalVariables.cs" />
+    <Compile Include="cl_DataWorkerServer.cs" />
+    <Compile Include="cl_Server_v2.cs" />
+    <Compile Include="cl_Settings.cs" />
+    <Compile Include="cl_SQLWorker.cs" />
+    <Compile Include="cl_XML_Data.cs" />
+    <Compile Include="f_EditUserPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_EditUserPassword.Designer.cs">
+      <DependentUpon>f_EditUserPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Main.Designer.cs">
+      <DependentUpon>f_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_MessageArhive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_MessageArhive.Designer.cs">
+      <DependentUpon>f_MessageArhive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Settings.Designer.cs">
+      <DependentUpon>f_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_UserContacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_UserContacts.Designer.cs">
+      <DependentUpon>f_UserContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_UserRegistrationBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_UserRegistrationBase.Designer.cs">
+      <DependentUpon>f_UserRegistrationBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="f_EditUserPassword.resx">
+      <DependentUpon>f_EditUserPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Main.resx">
+      <DependentUpon>f_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_MessageArhive.resx">
+      <DependentUpon>f_MessageArhive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_Settings.resx">
+      <DependentUpon>f_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_UserContacts.resx">
+      <DependentUpon>f_UserContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_UserRegistrationBase.resx">
+      <DependentUpon>f_UserRegistrationBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\pict_Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\pict_UsersRemove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pict_ConnectedClients.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pict_ServerLogo.ico" />
+    <None Include="Resources\pict_RemoveContact.png" />
+    <None Include="Resources\pict_SelectBaseFolder1.png" />
+    <None Include="Resources\pict_SaveSettings.png" />
+    <None Include="Resources\pict_Settings.png" />
+    <None Include="Resources\pict_UsersRemove.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

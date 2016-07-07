@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<cl_Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ps_BasePath>D:\WORK\base</ps_BasePath>
+  <ps_SocketIP>192.168.1.34</ps_SocketIP>
+  <ps_SocketPort>443</ps_SocketPort>
+  <ps_ClientVersion>1.37</ps_ClientVersion>
+  <pb_AutoStart>false</pb_AutoStart>
+</cl_Data>
